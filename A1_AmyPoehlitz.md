@@ -63,9 +63,9 @@ Q10 Response Here (<250 words)
 
 #### Q11 In total, how long did Assignment 1 take?
 
-Part 1: Tech Setup: _ minutes
+Part 1: Tech Setup: 90 minutes
 
-Part 2: Pre-Assessment: _ minutes
+Part 2: Pre-Assessment: 40 minutes
 
 Part 3: Readings: _ minutes
 
