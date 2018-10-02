@@ -39,17 +39,13 @@ Since we are currently looking an energy consumption data, it makes sense to def
 
 #### Q6: Explain your choice of formula for "avgkbtu".
 
-The formula I chose was avgkbtu=totkbtu/(sumoftotalcustomers/12).
+The formula I chose was avgkbtu=totkbtu/((totalelectriccustomers+0.05*totalgascustomers)/12).
 
-I chose this formula because the pivot table summed the customers from every month into the total sum. If I just used this value, I would be calculating the monthly average energy consumption per customer. By dividing the total number of customers by twelve, I essentially averaged the number of customers per month over the year.
-
-
+I only included 5% of the gas customers because I assumed that 95% of the gas customers were already included in the electric customers. Most gas customers likely consume electricity as well. I divided the totals from the pivot table to twelve to prevent double counting customers for each month. If I just used the pivot table value, I would be calculating the monthly average energy consumption per customer. By dividing the total number of customers by twelve, I essentially averaged the number of customers per month over the year.
 
 #### Q7 Paste a publicly viewable link to your Slides.
 
-Q7 Response Here
-
-
+https://docs.google.com/presentation/d/1J0iFxFkLxBkn573mUC-p59ciFaQXL1Dprbcy-ciXRrM/edit?usp=sharing
 
 #### Q8 In what ways do the results in or in the vicinity of your chosen zip code validate or contradict your expectations?
 
