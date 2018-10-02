@@ -42,8 +42,8 @@ library(mapview)
 Next we will load the PG&E data. A number of R functions allow you to enter an arbitrary number of objects as arguments and `rbind` is no exception. Because we want the data in long format, we can simply pass in four `read_csv` functions (using `readr` library) and voila, our data is imported and stored as a single object in long format. 
 
 ```{r Load PG&E data}
-elec <- rbind(read_csv("S:/CEE224X/A1/Data/PGE_2017_Q1_ElectricUsageByZip.csv"), read_csv("S:/CEE224X/A1/Data/PGE_2017_Q2_ElectricUsageByZip.csv"), read_csv("S:/CEE224X/A1/Data/PGE_2017_Q3_ElectricUsageByZip.csv"), read_csv("S:/CEE224X/A1/Data/PGE_2017_Q4_ElectricUsageByZip.csv"))
-gas <- rbind(read_csv("S:/CEE224X/A1/Data/PGE_2017_Q1_GasUsageByZip.csv"), read_csv("S:/CEE224X/A1/Data/PGE_2017_Q2_GasUsageByZip.csv"), read_csv("S:/CEE224X/A1/Data/PGE_2017_Q3_GasUsageByZip.csv"), read_csv("S:/CEE224X/A1/Data/PGE_2017_Q4_GasUsageByZip.csv"))
+elec <- rbind(read_csv("S:/CEE224X/Student Folders/Poehlitz/PGE_2017_Q1_ElectricUsageByZip.csv"), read_csv("S:/CEE224X/Student Folders/Poehlitz/PGE_2017_Q2_ElectricUsageByZip.csv"), read_csv("S:/CEE224X/Student Folders/Poehlitz/PGE_2017_Q3_ElectricUsageByZip.csv"), read_csv("S:/CEE224X/Student Folders/Poehlitz/PGE_2017_Q4_ElectricUsageByZip.csv"))
+gas <- rbind(read_csv("S:/CEE224X/Student Folders/Poehlitz/PGE_2017_Q1_GasUsageByZip.csv"), read_csv("S:/CEE224X/Student Folders/Poehlitz/PGE_2017_Q2_GasUsageByZip.csv"), read_csv("S:/CEE224X/Student Folders/Poehlitz/PGE_2017_Q3_GasUsageByZip.csv"), read_csv("S:/CEE224X/Student Folders/Poehlitz/PGE_2017_Q4_GasUsageByZip.csv"))
 ```
 
 Next, we convert kWh and therms to kBTU. A quick Google Search will yield the following:
@@ -95,7 +95,8 @@ zip_yearly_avg$ZIPCODE <- as.character(zip_yearly_avg$ZIPCODE)
 Now we deal with the SimplyAnalytics shapefile. From the `rgdal` package, we have the `readOGR` function. This allows R to import shapefiles, and other spatial data formats, as R objects that allow for further manipulation and analysis. 
 
 ```{r Load shapefile}
-ca_zips <- readOGR(dsn = "S:/CEE224X/A1/data/ca_zips", layer = "ca_zips")
+file.exists('S:/CEE224X/Student Folders/Poehlitz/ca_zips')
+ca_zips <- readOGR(dsn = "S:/CEE224X/Student Folders/Poehlitz/ca_zips", layer = "SimplyAnalytics_Shapefiles_2018-09-29_21_59_49_53a321a3dd5fec15174c52abc7dca46a")
 ```
 
 ```{r Join shapefile and csv}
