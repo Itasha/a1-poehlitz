@@ -72,3 +72,5 @@ Part 3: Readings: _ minutes
 Part 4: Practice Data Dive: Pass 1: 330 minutes
 
 Part 4: Practice Data Dive: Pass 2: 30 minutes
+
+Peer Review: I found it really insightful that you noticed the overlap between the electricity and the gas customers. It was also clever that in your seasonal analysis option, the different seasons are the same number of months as that would make comparison easier.I divided it up a different way but having the same number of months in a season is efficient. 
